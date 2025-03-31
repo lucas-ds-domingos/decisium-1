@@ -10,7 +10,7 @@ export function Login(){
             <br></br>
                 <input placeholder="Login"></input>
                     <br></br>
-                <input placeholder="Senha"></input>
+                <input placeholder="Senha" type='password'></input>
                     <br></br>
                 <button><a href="/home">Entrar</a></button>
             </div>
