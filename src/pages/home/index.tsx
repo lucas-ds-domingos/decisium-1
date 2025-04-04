@@ -1,19 +1,30 @@
-import { useOutletContext } from "react-router-dom";
-import styles from "./home.module.css";
+import React from "react";
+import Table, { Column } from "../../components/teste/TesteCo"; // 
 
-export function Home() {
-    const { selectedItem } = useOutletContext<{ selectedItem: string | null }>();
+type User = {
+  id: number;
+  name: string;
+  email: string;
+};
 
-    return (
-        <div className={styles.container}>
-            {selectedItem === "listagemOS" ? (
-                <div>
-                    <h2>Listagem de OS em aberto</h2>
-                    <p>Aqui você pode visualizar todas as ordens de serviço em aberto.</p>
-                </div>
-            ) : (
-                <h2>Bem-vindo ao sistema!</h2>
-            )}
-        </div>
-    );
-}
+const Home: React.FC = () => {
+  const users: User[] = [
+    { id: 1, name: "João", email: "joao@email.com" },
+    { id: 2, name: "Maria", email: "maria@email.com" },
+  ];
+
+
+  const columns: Column<User>[] = [
+    { header: "ID", accessor: "id" },
+    { header: "Nome", accessor: "name" },
+    { header: "E-mail", accessor: "email" },
+  ];
+
+  return (
+    <div>
+      <Table columns={columns} data={users} />
+    </div>
+  );
+};
+
+export default Home;

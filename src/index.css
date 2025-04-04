@@ -1,1 +1,34 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-stretch: 100%;
+    src: url(https://fonts.gstatic.com/s/roboto/v47/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3GUBGEe.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+
+  body{
+    background-color: #f1f5f7;
+  }
+  button{
+    cursor: pointer
+}
+.scrollbar-transparent::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-transparent::-webkit-scrollbar-thumb {
+    background-color: #4a5a6b; /* Cor do ponteiro */
+    border-radius: 3px;
+  }
+  
+  .scrollbar-transparent::-webkit-scrollbar-track {
+    background-color: transparent; /* Fundo transparente */
+  }
+  
+  .scrollbar-transparent:hover::-webkit-scrollbar-thumb {
+    background-color: #5a6b7c; /* Cor do ponteiro no hover */
+  }
