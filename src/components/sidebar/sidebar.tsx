@@ -88,7 +88,6 @@ const menuItems = [
 
 export default function Sidebar({
   isExpanded,
-  setIsExpanded,
   setBreadcrumb,
 }: { 
   isExpanded: boolean;
